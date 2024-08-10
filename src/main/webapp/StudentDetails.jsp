@@ -19,6 +19,7 @@
  	<th>Roll No</th>
  	<th>Student Name</th>
  	<th>Email</th>
+ 	<th>Password</th>
  	<th></th>
  
 
@@ -27,6 +28,7 @@
 	<td><input type="text" name="rollno" placeholder="Roll No" required></td>
 	<td><input type="text" name="name" placeholder="Student Name" required></td>
 	<td><input type="email" name="email" placeholder="Email " required></td>
+	<td><input type="text" name="password" placeholder="Password" required></td>
 	<td><input type="submit" value="Add"></td>
 	
 

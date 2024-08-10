@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Student Attendance</title>
 </head>
 <body>
     <form action="AttendanceSubmition" method="post">
@@ -13,9 +13,10 @@
         <input type="date" id="attendanceDate" name="attendanceDate" required>
         <table>
             <tr>
-                <td>Name</td>
-                <td>RollNo</td>
-                <td>Mark Attendance</td>
+                <th>Name</th>
+                <th>RollNo</th>
+                <th>Present</th>
+                <th>Absent</th>
             </tr>
             
             <%  
@@ -34,7 +35,9 @@
             <tr>
                 <td><input type="text" value="<%=name %>" disabled></td>    
                 <td><input type="text" value="<%=rollno %>" disabled></td>
-                <td><input type="text" name="attendance_<%=rollno %>"></td>
+                <td><input type="radio" name="attendance_<%=rollno %>" value="Present"></td>
+                <td><input type="radio" name="attendance_<%=rollno %>" value="Absent"></td>
+                						
                 <input type="hidden" name="name_<%=rollno %>" value="<%=name %>">
                 <input type="hidden" name="rollno_<%=rollno %>" value="<%=rollno %>">
             </tr>

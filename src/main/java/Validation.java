@@ -53,27 +53,31 @@ public class Validation extends HttpServlet {
 					}
 					
 				}
-				if(flag == 0) {
-					ResultSet res1 = stmt.executeQuery("select * from AddDetailse");
-					
-					while(res1.next()) {
-						String sname = res1.getString("studentname");
-						String spass = res1.getString("password");
-						
-						if(uname.equals(sname) && pwd.equals(spass)) {
-							out.println("Student login Sucessfully");
-							flag = 1;
-//							RequestDispatcher rd = request.getRequestDispatcher("UserHome.jsp");
-//							rd.forward(request, response);
-						}else if(flag == 0) {
-			//				out.println("Username and Password Invalid");
-							RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-							rd.forward(request, response);
-							
-						}
-						
-					}
+				
+				if(flag == 0){
+					out.println("username and password match");
 				}
+//				if(flag == 0) {
+//					ResultSet res1 = stmt.executeQuery("select * from AddDetailse");
+//					
+//					while(res1.next()) {
+//						String sname = res1.getString("studentname");
+//						String spass = res1.getString("password");
+//						
+//						if(uname.equals(sname) && pwd.equals(spass)) {
+//							out.println("Student login Sucessfully");
+//							flag = 1;
+////							RequestDispatcher rd = request.getRequestDispatcher("UserHome.jsp");
+////							rd.forward(request, response);
+//						}else if(flag == 0) {
+//			//				out.println("Username and Password Invalid");
+//							RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+//							rd.forward(request, response);
+//							
+//						}
+//						
+//					}
+//				}
 				
 			}
 			

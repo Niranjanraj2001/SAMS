@@ -27,8 +27,9 @@ padding: 20px;
 
 <table align="center">
 	<tr>
-		<td><a href="login.jsp"><h2>Login</h2></a></td>
-		<td><a href="register.jsp"><h2>Register</h2></a></td>
+		<td><a href="login.jsp"><h2>Faculty Login</h2></a></td>
+		<td><a href="StudentLogIn.jsp"><h2>Student Login</h2></a></td>
+		
 	</tr>
 
 </table>

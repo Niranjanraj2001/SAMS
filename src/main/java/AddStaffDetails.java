@@ -12,37 +12,39 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/AddStudentDetails")
-public class AddStudentDetails extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+@WebServlet("/AddStaffDetails")
+public class AddStaffDetails extends HttpServlet {
+
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
+	
 		try(PrintWriter out = response.getWriter()){
 			
-			String rollno = request.getParameter("rollnum");
-			String name = request.getParameter("studentname");
+			String eid = request.getParameter("employeid");
+			String sname = request.getParameter("staffname");
+			String email = request.getParameter("email");
 			String password = request.getParameter("password");
+			
 			
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentDetails", "root", "1234");
 			java.sql.Statement stmt =  con.createStatement();
 			
-			int value = stmt.executeUpdate("insert into AddDetailse (roll_no,studentname,password) values ('"+rollno+"','"+name+"','"+password+"')");
+
+			int value = stmt.executeUpdate("insert into AddStaff(employeid,staffname,email,password) values('"+eid+"','"+sname+"','"+email+"','"+password+"')");
 			
 			if(value == 1) {
-				out.println("update Successfully");
+				response.sendRedirect("AddFaculty.jsp");
+				
+			}else {
+				out.println("not inserted");
 			}
-			
-			else {
-				out.println("Not Updated");
-			}
-			
 		}catch(Exception e) {
-			System.out.println(e);		}
+		System.out.println(e);
 		
 	}
 
+}
+	
 }

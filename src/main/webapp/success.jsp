@@ -13,10 +13,10 @@
     <form action="SaveToDatabaseServlet" method="post">
         <table>
             <tr>
-                <td>Name</td>
-                <td>RollNo</td>
-                <td>Attendance</td>
-                <td>Date</td>
+                <th>Name</th>
+                <th>RollNo</th>
+                <th>Attendance</th>
+                <th>Date</th>
             </tr>
             <%
                 ArrayList<Attendance> attendanceList = (ArrayList<Attendance>) session.getAttribute("attendanceList");

@@ -10,7 +10,7 @@
     input{
     width: 100%;
     height: 20%;
-    margin-left: 6.5%;
+    margin-left: 2%;
     padding: 10px;
     margin-top: 10px;
     font-size: larger;
@@ -86,7 +86,7 @@ function myFunction(){
 
 
 	<form action="Validation" method ="get" onsubmit="return myFunction()">
-	<h1 align="center">Login Form</h1>
+	<h1 align="center">Faculty Login</h1>
 	
 	
 	<table align="center">
@@ -103,7 +103,7 @@ function myFunction(){
 	<tr>
 	<td></td>
 	<td><input type="submit" id="submit"></td>
-	<td><a class="btn" href="Newuser.html">Sign Up</a></td>
+	
 	
 	
 	</tr>
